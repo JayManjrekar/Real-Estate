@@ -9,6 +9,7 @@ from xBP_routes.beaches import beaches
 from crudy.app_crud import app_crud
 from crudy.app_crud_api import app_crud_api
 
+
 app.register_blueprint(beaches)
 app.register_blueprint(games)
 app.register_blueprint(about_pages)
@@ -16,7 +17,6 @@ app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
 
 # app.routes
-
 @app.route('/')
 def index():
     return render_template("/index.html")
@@ -60,6 +60,11 @@ def Wordle():
 @app.route('/jaypbl/')
 def jaypbl():
     return render_template("/assignments/Beaches/jaypbl.html")
+
+@app.route('/authorization/')
+def authorization():
+    return render_template("/Login/authorization.html")
+
 
 
 
